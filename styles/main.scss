@@ -1,0 +1,653 @@
+// bower:scss
+// endbower
+// -- fonts --
+@font-face {
+    font-family: 'Avenir-Light';
+    src: url('../fonts/Avenir-Light/AvenirNextCyr-Light.eot');
+    src: url('../fonts/Avenir-Light/AvenirNextCyr-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Avenir-Light/AvenirNextCyr-Light.woff') format('woff'), url('../fonts/Avenir-Light/AvenirNextCyr-Light.ttf') format('truetype'), url('../fonts/Avenir-Light/AvenirNextCyr-Light.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: url('../fonts/Avenir-Medium/AvenirNextCyr-Medium.eot');
+    src: url('../fonts/Avenir-Medium/AvenirNextCyr-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Avenir-Medium/AvenirNextCyr-Medium.woff') format('woff'), url('../fonts/Avenir-Medium/AvenirNextCyr-Medium.ttf') format('truetype'), url('../fonts/Avenir-Medium/AvenirNextCyr-Medium.svg') format('svg');
+}
+
+// -- end fonts --
+// -- variables --
+$font-light: 'Avenir-Light',
+Helvetica,
+Arial,
+sans-serif;
+$font-medium: 'Avenir-Medium',
+Helvetica,
+Arial,
+sans-serif;
+$gray: #666;
+$ligthGray: #f6f7f9;
+$blue: #5bc4e1;
+$purple: #78288b;
+$darkBLue: #0088d2;
+$pink: #e289b9;
+// -- end variables --
+// -- mixins --
+@mixin flexBoxRow {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+@mixin flexBoxColumn {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+@mixin titleText {
+    font-family: $font-light;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+@mixin subtitleText {
+    font-family: $font-light;
+    font-size: 2.0em;
+    text-align: center;
+}
+
+@mixin nomalText {
+    font-family: $font-medium;
+    font-size: 1.6em;
+    line-height: 1.4;
+}
+
+// -- end mixins --
+body {
+    width: 100%;
+    background: #ffffff;
+    font: $font-medium;
+    color: $gray;
+    font-size: 62.5%;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+#navContainer {
+    position: relative;
+    font-family: $font-medium;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    height: 66px;
+    #logo {
+        float: left;
+        padding-left: 12.5%;
+        padding-top: 20px;
+    }
+    #centerNav {
+        position: absolute;
+        padding-left: 24.875%;
+        li {
+            list-style: none;
+            display: inline-block;
+            padding-top: 10px;
+            padding-left: 45px;
+            a {
+                color: $gray;
+                text-decoration: none;
+            }
+            a:hover {
+                color: black;
+            }
+        }
+    }
+    #rightNav {
+        float: right;
+        padding-right: 12.5%;
+        li {
+            list-style: none;
+            float: left;
+            padding-top: 10px;
+            padding-left: 25px;
+            a {
+                color: $gray;
+                text-decoration: none;
+            }
+            a:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+// -- slogan section --
+.play-container {
+    clear: both;
+    position: relative;
+    font-family: $font-light;
+    color: #FFF;
+    background: $blue;
+}
+
+.play-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 46.875%;
+    bottom: 0;
+    right: 0;
+}
+
+.play-title {
+    font-size: 5.0em;
+}
+
+.play-subtitle {
+    top: 140px;
+    font-size: 2.5em;
+}
+
+.section-image {
+    padding-left: 12.875%;
+    display: block;
+    height: auto;
+}
+
+//  -- promotion code section --
+.code-wrapper {
+    @include subtitleText();
+    background: $ligthGray;
+    padding: 40px 0 50px 0;
+}
+
+.promotion-text {
+    padding-bottom: 30px;
+    @include nomalText();
+}
+
+.white-field {
+    background-color: #FFF;
+    border: 1px solid $gray;
+    width: 18.125%;
+    height: 50px;
+    text-align: center;
+}
+
+.purple-button {
+    background-color: $purple;
+    border: 3px solid $purple;
+    font-family: $font-medium;
+    font-size: 0.8rem;
+    color: #FFF;
+    width: 13.25%;
+    height: 50px;
+}
+
+//  -- Luna cleanse section --
+.luna-cleanse-wrapper {
+    @include flexBoxRow();
+    padding: 0 12.5%;
+}
+
+.luna-left {
+    max-width: 588px;
+    padding-right: 1.125%;
+}
+
+.luna-right {
+    padding-top: 40px;
+    padding-left: 4.6875%;
+}
+
+.luna-subtitle {
+    @include titleText();
+    text-align: left;
+    padding: 130px 0 40px 0;
+}
+
+.luna-subtitle-right {
+    @include titleText();
+    text-align: left;
+    padding: 100px 0 45px 0;
+}
+
+.luna-text {
+    @include nomalText();
+    padding-bottom: 63px;
+}
+
+.luna-button {
+    background: $purple;
+    color: #FFF;
+    padding: 20px 21.375%;
+    font-family: $font-medium;
+    font-size: 2.4em;
+}
+
+// -- cleanse the planet section --
+.planet-wrapper {
+    background-color: $darkBLue;
+    position: relative;
+    width: 100%;
+}
+
+.planet-text-wrapper {
+    color: #FFF;
+    position: inherit;
+    
+}
+
+.planet-title {
+    position: absolute;
+    width: 100%;
+    @include titleText();
+    top: 3vh;
+}
+
+.planet-subtitle {
+    position: absolute;
+    width: 100%;
+    top: 13vh;
+    @include subtitleText();
+}
+
+.planet-image {
+    width: 100%;
+}
+
+// -- recycle section --
+.recycle-container {
+    padding: 165px 0 120px 0;
+}
+
+.recycle-title {
+    @include titleText();
+    padding-bottom: 35px;
+}
+
+.recycle-subtitle {
+    font-family: $font-light;
+    font-size: 2.1em;
+    text-align: center;
+    text-decoration: underline;
+    word-spacing: 50px;
+    padding-bottom: 70px;
+}
+
+.recycle-wrapper {
+    padding: 0 18.125%;
+    @include nomalText();
+    @include flexBoxRow();
+}
+
+// -- eco section --
+.eco-friendly-wrapper {
+    background-color: $ligthGray;
+    padding: 60px 6.25% 83px 6.25%;
+}
+
+.eco-friendly-title {
+    @include titleText();
+    padding-bottom: 50px;
+}
+
+.eco-friendly-subtitle {
+    @include nomalText();
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.row {
+    text-align: center;
+    padding: 0 20% 15px 20%;
+    @include flexBoxRow();
+}
+
+// -- cleanse your body section --
+.cleanse-container {
+    background: #e289b9;
+    color: #FFF;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.cleanse-title {
+    @include titleText();
+}
+
+.cleanse-text {
+    @include nomalText();
+}
+
+.cleanse-image {
+    display: block;
+    margin: 0 auto;
+}
+
+// -- healthy section --
+.healthy-wrapper {
+    text-align: center;
+}
+
+.healthy-title {
+    padding: 65px 0 25px 0;
+    @include titleText();
+}
+
+.healthy-text {
+    padding-bottom: 77px;
+    @include nomalText();
+}
+
+.healthy-first-columns {
+    @include flexBoxRow();
+    padding: 0 21.875%;
+}
+
+.healthy-second-columns {
+    @include flexBoxRow();
+    padding: 0 28.125%;
+}
+
+// -- super foods section --
+.super-food-container {
+    background: $ligthGray;
+    padding: 70px 0px 60px 0px;
+}
+
+.super-food-title {
+    padding-bottom: 62px;
+    @include titleText();
+}
+
+.icon-text {
+    @include nomalText();
+    text-align: center;
+    padding: 52px 0 118px 0;
+}
+
+.food-images {
+    padding-left: 17.5%;
+    padding-right: 17.5%;
+    @include flexBoxRow();
+}
+
+// -- detox section --
+.detox-wrapper {
+    padding: 70px 0 115px 0;
+}
+
+.detox-title {
+    padding-bottom: 40px;
+    @include titleText();
+}
+
+.detox-subtitle {
+    padding-bottom: 40px;
+    @include nomalText();
+    text-align: center;
+}
+
+.recipe-container {
+    padding: 0 12.5%;
+    @include nomalText();
+    @include flexBoxRow();
+}
+
+// -- mysa magazine
+.magazine-container {
+    background: $ligthGray;
+    padding-bottom: 94px;
+}
+
+.magazine-title {
+    padding: 66px 0 40px 0;
+    @include titleText();
+}
+
+.magazine-subtitle {
+    padding-bottom: 40px;
+    @include nomalText();
+    text-align: center;
+}
+
+.magazine-images-wrapper {
+    padding: 0 12.5%;
+    @include flexBoxRow();
+}
+.hov:hover {
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7);
+}
+
+// -- FAQ --
+.faq-container {
+    padding: 0 21.25% 0 23.125%;
+}
+
+.faq-title {
+    @include titleText();
+}
+
+.questions-container {
+    @include nomalText();
+    @include flexBoxRow();
+}
+
+.faq-text {
+    max-width: 275px;
+    padding-bottom: 15px;
+}
+
+// -- tips section --
+.tips-container {
+    background: $blue;
+    text-align: center;
+}
+
+.tips-title {
+    @include titleText();
+    color: #FFF;
+    padding: 70px 0 55px 0;
+}
+
+.tips-form {
+    text-align: center;
+    @include subtitleText();
+    display: block;
+    width: 0 auto;
+    padding-bottom: 45px;
+}
+
+.tips-email {
+    padding: 22.5px 15.0625%;
+}
+
+.tips-button {
+    padding: 20.5px 8.75%;
+    background: $purple;
+    border: 2px solid $purple;
+    color: #FFF;
+}
+
+// -- footer --
+.footer-container {
+    background: $ligthGray;
+    text-align: center;
+    padding: 40px 7.5% 10px 7.5%;
+}
+
+.footer-wrapper {
+    padding-bottom: 25px;
+    @include nomalText();
+    @include flexBoxRow();
+}
+
+.footer-text {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    @include nomalText();
+    font-size: 1em;
+    padding-bottom: 40px;
+}
+
+// -- viewport 1024px --
+@media (max-width: 1024px) {
+#navContainer {
+    position: relative;
+    #logo {
+    float: none;
+    padding-left: 0;
+    display: block;
+    margin: auto;
+    }
+    #centerNav {
+        display: none;
+    }
+    #rightNav {
+        display: none;
+    }
+}
+
+    .play-wrapper {
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .play-title {
+        font-size: 3.3em; 
+    }
+    .planet-title,
+    .recycle-title,
+    .eco-friendly-title,
+    .cleanse-title,
+    .healthy-title,
+    .super-food-title,
+    .detox-title,
+    .magazine-title,
+    .faq-title,
+    .tips-title {
+        font-size: 3em;
+    }
+    .play-subtitle,
+    .luna-subtitle,
+    .luna-subtitle-right,
+    .planet-subtitle,
+    .recycle-subtitle,
+    .eco-friendly-subtitle,
+    .detox-subtitle,
+    .magazine-subtitle,
+    .play-subtitle {
+        font-size: 2em;
+    }
+    .promotion-text {
+        font-size: 1.5rem;
+    }
+    .luna-text,
+    .recycle-wrapper,
+    .row,
+    .cleanse-text,
+    .healthy-text,
+    .icon-text,
+    .recipe-container,
+    .questions-container {
+        font-size: 1.5em;
+    }
+    .luna-cleanse-wrapper,
+    .recycle-wrapper,
+    .food-images,
+    .recipe-container,
+    .images-wrapper,
+    .questions-container,
+    .magazine-images-wrapper {
+        @include flexBoxColumn();
+    }
+    .row {
+        @include flexBoxColumn();
+    }
+    .recycle-wrapper {
+        text-align: center;
+    }
+}
+
+// -- viewport 768px --
+@media (max-width: 768px) {
+        .play-wrapper {
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    .play-title {
+        font-size: 3em;
+    }
+    .planet-title,
+    .recycle-title,
+    .eco-friendly-title,
+    .cleanse-title,
+    .healthy-title,
+    .super-food-title,
+    .detox-title,
+    .magazine-title,
+    .faq-title,
+    .tips-title {
+        font-size: 2em;
+    }
+    .play-subtitle,
+    .luna-subtitle,
+    .luna-subtitle-right,
+    .planet-subtitle,
+    .recycle-subtitle,
+    .eco-friendly-subtitle,
+    .detox-subtitle,
+    .magazine-subtitle,
+    .play-subtitle {
+        font-size: 1.6em;
+    }
+    .promotion-text {
+        font-size: 1.2rem;
+    }
+    .luna-text,
+    .recycle-wrapper,
+    .row,
+    .cleanse-text,
+    .healthy-text,
+    .icon-text,
+    .recipe-container,
+    .questions-container {
+        font-size: 1.3em;
+    }
+    .planet-image {
+    max-width: 300px;
+    width: 100vw;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 100px 0 50px 0;
+    -webkit-filter: opacity(.2);
+    filter: opacity(.2);
+    }
+    
+    .white-field,
+    .purple-button {
+        width: 80%;
+    }
+    .healthy-first-columns,
+    .healthy-second-columns,
+    .footer-wrapper {
+        @include flexBoxColumn();
+    }
+}

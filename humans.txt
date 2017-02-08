@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> Daniel Godigna <role> Front-end <twitter> @DGAcode
+
+# THANKS
+
+    <name> Juan Luis Lozano (Design)
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Modernizr
