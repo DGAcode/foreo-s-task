@@ -1,5 +1,5 @@
 ## Foreo's task
-This is the front end for a design made by Foreo, and the front end made by me.
+This is the result of a task given by FOREO
 
 ## MIT License
 
